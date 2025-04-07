@@ -1,7 +1,8 @@
 from flask import Flask
 from flask import render_template
 from flask import json
-app = Flask(_name_)
+
+app = Flask(__name__)
 
 @app.route('/<path:valeurs>')
 def exercice(valeurs):
@@ -15,5 +16,5 @@ def exercice(valeurs):
 
     return str(min_valeur)
 
-if name == '_main_':
+if __name__ == '__main__':
     app.run(debug=True)
