@@ -16,4 +16,4 @@ def exercice(valeur):
 
 if name == "main":
     app.run(debug=True)
-
+﻿
