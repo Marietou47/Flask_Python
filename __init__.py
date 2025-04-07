@@ -5,17 +5,16 @@ from flask import json
 app = Flask(name)
 
 @app.route('/<int:valeur>')
-def suite_fibonacci(n):
+def exercice(valeur):
     a, b = 0, 1
-    sequence = []
-    for_in range(n):
-       suite.append(a)
-        a, b = b, a + b
-       return suite
+    sequence = [a, b]
+    for_in range(2, valeur):
+      a,b = b, a + b
+      sequence.append(b)
+      
+    fibonacci = '<pre>' + ', '.join(map(str, sequence)) + '</pre>'
+    return fibonacci
+    
 
-# Exemple avec la valeur 7
-valeur = 7
-resultat = suite_fibonacci(valeur)
-print(",".join(str(x) for x in resultat))    
 if name == "main":
     app.run(debug=True)
